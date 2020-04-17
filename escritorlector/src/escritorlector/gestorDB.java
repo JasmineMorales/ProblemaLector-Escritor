@@ -11,7 +11,7 @@ package escritorlector;
  */
 public class gestorDB {
 
-    void openE(int id) {
+    void openE(int id) throws InterruptedException{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -19,7 +19,7 @@ public class gestorDB {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    void openL(int id) {
+    void openL(int id) throws InterruptedException{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

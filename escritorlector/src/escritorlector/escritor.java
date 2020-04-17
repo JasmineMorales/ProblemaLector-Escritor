@@ -5,10 +5,31 @@
  */
 package escritorlector;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Jonathan
  */
-public class escritor {
+public class escritor extends Thread{
+    private gestorDB gestor;
+    private int id;
+
+    public escritor(gestorDB gestor, int id) {
+        this.gestor = gestor;
+        this.id = id;
+    }
     
+    public void run(){
+        while (true) {
+            try {
+                gestor.openE(id);
+                
+                gestor.closeE(id);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(escritor.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
 }
