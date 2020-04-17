@@ -7,7 +7,7 @@ package escritorlector;
 
 /**
  *
- * @author Jonathan
+ *
  */
 public class gestorDB {
 

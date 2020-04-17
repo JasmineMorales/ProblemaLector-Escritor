@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Jonathan
+ * 
  */
 public class lector extends Thread{
     private gestorDB gestor;
