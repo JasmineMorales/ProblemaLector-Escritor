@@ -5,6 +5,7 @@
  */
 package escritorlector;
 
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,6 +14,7 @@ import java.util.logging.Logger;
  *
  */
 public class escritor extends Thread{
+    private static Random rand = new Random();
     private gestorDB gestor;
     private int id;
 
@@ -25,8 +27,9 @@ public class escritor extends Thread{
         while (true) {
             try {
                 gestor.openE(id);
-                
-                gestor.closeE(id);
+                Thread.sleep(rand.nextInt(200));
+                gestor.closeE(id);                
+                Thread.sleep(rand.nextInt(300));
             } catch (InterruptedException ex) {
                 Logger.getLogger(escritor.class.getName()).log(Level.SEVERE, null, ex);
             }
